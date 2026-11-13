@@ -42,7 +42,7 @@
             position: relative;
             padding-top: 56.25%;
             margin-top: 30px;
-            background: #000000;
+            background: #000000 center / cover no-repeat;
         }
 
         .work-detail__video iframe {
@@ -449,12 +449,28 @@
                 return url;
             }
 
+            // 썸네일에 마우스를 올리면(모바일은 터치하면) 영상 서버에 미리 연결해 둡니다
+            var warmed = {};
+            function warm(url) {
+                var origin = toEmbed(url).split('/').slice(0, 3).join('/');
+                if (warmed[origin]) { return; }
+                warmed[origin] = true;
+                $('<link rel="preconnect">').attr('href', origin).appendTo('head');
+            }
+            $('.portfolio__item').on('mouseenter touchstart', function () {
+                var url = $(this).find('.work-detail__video').data('video');
+                if (url) { warm(url); }
+            });
+
             $('.detail-popup').magnificPopup({
                 type: 'inline',
                 midClick: true,
                 callbacks: {
                     open: function () {
                         var $video = this.content.find('.work-detail__video');
+                        // 플레이어가 뜰 때까지 썸네일을 대신 보여줍니다
+                        var thumb = $(this.st.el).closest('.portfolio__item__video').data('setbg');
+                        if (thumb) { $video.css('background-image', 'url("' + thumb + '")'); }
                         $video.html('<iframe src="' + toEmbed($video.data('video')) +
                             '" referrerpolicy="strict-origin-when-cross-origin"' +
                             ' allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>');
