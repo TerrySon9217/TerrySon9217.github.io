@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="영상 디자이너 소개와 이력">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About | 이름</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- About 페이지 전용 스타일 -->
+    <style>
+        .profile__photo img {
+            width: 100%;
+            max-width: 360px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto 30px;
+        }
+
+        .profile__text h3 {
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .profile__text .profile__role {
+            color: #00bfe7;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .profile__text p {
+            color: #adadad;
+            line-height: 1.8;
+        }
+
+        .profile__skills {
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        .profile__skills li {
+            list-style: none;
+            display: inline-block;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 5px 14px 3px;
+            margin: 0 6px 8px 0;
+            font-size: 14px;
+        }
+
+        .career {
+            margin-top: 70px;
+        }
+
+        .career h4 {
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .career__list {
+            padding: 0;
+            margin-bottom: 50px;
+        }
+
+        .career__list li {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .career__list .career__period {
+            flex: 0 0 150px;
+            color: #00bfe7;
+            font-size: 15px;
+        }
+
+        .career__list .career__detail strong {
+            color: #ffffff;
+            display: block;
+            font-weight: 600;
+        }
+
+        .career__list .career__detail span {
+            color: #adadad;
+            font-size: 15px;
+        }
+
+        @media (max-width: 575px) {
+            .career__list li {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .career__list .career__period {
+                flex: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt="로고"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.html">Portfolio</a></li>
+                                <li class="active"><a href="./about.html">About</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__nav__social">
+                            <a href="#"><i class="fa fa-vimeo"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>About</h2>
+                        <div class="breadcrumb__links">
+                            <a href="./index.html">Portfolio</a>
+                            <span>About</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- About Section Begin -->
+    <section class="spad">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-5">
+                    <div class="profile__photo">
+                        <!-- 프로필 사진: img 폴더에 profile.jpg 로 넣으세요 (정사각형 권장) -->
+                        <img src="img/profile.jpg" alt="프로필 사진">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7">
+                    <div class="profile__text">
+                        <h3>이름</h3>
+                        <span class="profile__role">Video Designer</span>
+                        <p>여기에 두세 문장으로 짧은 소개를 적습니다. 어떤 작업을 주로 하는지,
+                            어떤 스타일과 강점을 가지고 있는지 적어주세요.</p>
+                        <ul class="profile__skills">
+                            <li>LookDev</li>
+                            <li>Motion Graphic</li>
+                            <li>VFX</li>
+                            <li>Modeling</li>
+                            <li>Animation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="career">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4>Experience</h4>
+                        <!-- <li> 한 줄이 이력 하나입니다. 복사해서 늘리거나 지우세요. -->
+                        <ul class="career__list">
+                            <li>
+                                <div class="career__period">2024.03 – 현재</div>
+                                <div class="career__detail">
+                                    <strong>회사 이름 / 직책</strong>
+                                    <span>담당한 업무나 대표 프로젝트를 한 줄로 적습니다.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="career__period">2022.01 – 2024.02</div>
+                                <div class="career__detail">
+                                    <strong>회사 이름 / 직책</strong>
+                                    <span>담당한 업무나 대표 프로젝트를 한 줄로 적습니다.</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h4>Education</h4>
+                        <ul class="career__list">
+                            <li>
+                                <div class="career__period">2018 – 2022</div>
+                                <div class="career__detail">
+                                    <strong>학교 이름</strong>
+                                    <span>전공</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h4>Tools</h4>
+                        <ul class="profile__skills">
+                            <li>After Effects</li>
+                            <li>Cinema 4D</li>
+                            <li>Houdini</li>
+                            <li>Maya</li>
+                            <li>Nuke</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt="로고"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__social">
+                            <a href="#"><i class="fa fa-vimeo"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p class="footer__copyright__text">Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            All rights reserved | This template is made with <i class="fa fa-heart-o"
+                                aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
